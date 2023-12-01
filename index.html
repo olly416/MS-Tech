@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Expires" content="-1" />
+    <title>MS Tech</title>
+    <!-- 스와이퍼CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"
+    />
+    <!-- 파비콘 -->
+    <link rel="shortcut icon" href="/img/favicon16.ico" type="image/x-icon" />
+    <!-- 기본CSS -->
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <?php include 'header.php'; ?>
+
+    <main>
+      <article class="main_swiper">
+        <h2 class="hidden">swiperSection</h2>
+        <div class="swiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide slide1">
+              <div class="slideContent">
+                <h2>
+                  <span>세상을 선도하는 기술로<br /></span>
+                  <span>지속가능한 미래를 만들어 갑니다</span>
+                </h2>
+              </div>
+            </div>
+            <div class="swiper-slide slide2">
+              <div class="slideContent">
+                <h2>
+                  <span>첨단 기술과 혁신적인 배터리 솔루션을 통해<br /></span>
+                  <span>전기차 산업을 선도하고 있습니다.</span>
+                </h2>
+              </div>
+            </div>
+            <div class="swiper-slide slide3">
+              <div class="slideContent">
+                <h2>
+                  <span>최고의 인재들과 함께<br /></span>
+                  <span>기업의 가치를 극대화하고<br /></span>
+                  <span>회사와 함께 성장합니다.</span>
+                </h2>
+              </div>
+            </div>
+          </div>
+          <div class="swiper_controller">
+            <div class="swiper-pagination"></div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+          </div>
+          <div class="swiper-scrollbar"></div>
+        </div>
+        <div class="iconScroll"></div>
+      </article>
+      <section class="Business">
+        <div class="container">
+          <h2>Business Division</h2>
+          <div class="businessFrame">
+            <div class="businessBox video_container">
+              <video
+                src="vid/car_540p.mp4"
+                class="business_vid businessVid1"
+                poster="img/thumbnail_car.jpg"
+                loop
+                muted
+              ></video>
+              <img
+                src="img/car_540p.gif"
+                class="business_img businessImg1"
+                alt="car_gifImg"
+              />
+              <div class="businessBox_descript">
+                <h3>배터리사업부문</h3>
+                <p>
+                  글로벌 브랜드의 전기자동차 및 다양한 전자기기 브랜드회사에
+                  우리의 배터리 제품을 공급하고 있습니다.
+                </p>
+              </div>
+            </div>
+            <div class="businessBox video_container">
+              <div class="businessBox_videoContent">
+                <video
+                  src="vid/washer_540p.mp4"
+                  class="business_vid businessVid2"
+                  poster="img/thumbnail_washer.jpg"
+                  loop
+                  muted
+                ></video>
+                <img
+                  src="img/washer_540p.gif"
+                  class="business_img businessImg2"
+                  alt="washer_gifImg"
+                />
+              </div>
+              <div class="businessBox_descript">
+                <h3>가전사업부문</h3>
+                <p>
+                  인정받은 기술력과 안정적인 가격으로 국내외의 공급망을 통해 MS
+                  Tech의 부품들로 이뤄진 가전들이 세계로 뻗어나가고 있습니다.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="Company">
+        <h2>Company</h2>
+        <div class="companyContent_img">
+          <div class="background background01"></div>
+          <div class="background background02"></div>
+          <div class="background background03"></div>
+          <div class="background background04"></div>
+        </div>
+        <div class="companyContentBox">
+          <div class="companyContent_content content1">
+            <h4>Mission</h4>
+            <p>
+              지속가능한 기술을 연구 개발하고<br />
+              인재를 위한 투자를 게을리 하지 않으며<br />
+              다가오는 새로운 세상을 주도합니다.
+              <a href="" class="moreTxt">더보기</a>
+            </p>
+          </div>
+          <div class="companyContent_content content2">
+            <h4>IR</h4>
+            <div class="content2_info">
+              <a href="financialReport.html" class="financialReport">
+                <i class="fa-solid fa-hand-holding-dollar"></i>
+                <span>재무제표</span>
+              </a>
+              <a href="regularReport.html" class="regularReport">
+                <i class="fa-regular fa-file-word"></i>
+                <span>정기보고서</span>
+              </a>
+              <a href="financialResult.html" class="financialResult">
+                <i class="fa-solid fa-chart-line"></i>
+                <span>실적발표</span>
+              </a>
+            </div>
+          </div>
+          <div class="companyContent_content content3">
+            <h4>history</h4>
+            <p>
+              1988년에 불모지에서 시작하여<br />
+              마침내 업계 최고가 되기까지<br />
+              우리의 끊임없는 열정과 노력의 역사입니다.
+              <a href="" class="moreTxt">더보기</a>
+            </p>
+          </div>
+        </div>
+      </section>
+      <section class="Notice">
+        <div class="container">
+          <h2>News & Notice</h2>
+          <div class="noticeContent">
+            <div class="noticeContent_box notice1">
+              <div class="noticeImg">
+                <img src="img/logo_mark.png" alt="공지뉴스" />
+              </div>
+              <div class="noticeClip">
+                <h4>제37기 결산공고 재무상태표</h4>
+                <p>
+                  게시글의 '더보기'를 누르면 첨부한 이미지로 자세하게 확인할 수
+                  있습니다.<br />
+                  <span>2023-03-28</span>
+                  <a href="" class="moreTxt">더보기</a>
+                </p>
+              </div>
+            </div>
+            <div class="noticeContent_box notice2">
+              <div class="noticeImg"></div>
+              <div class="noticeClip">
+                <h4>미국 ESS 시장 공략 가속화</h4>
+                <p>
+                  보도자료 : 미국 ESS 시장 공략 가속화<br />
+                  <span>2021-01-15</span>
+                  <a href="" class="moreTxt">더보기</a>
+                </p>
+              </div>
+            </div>
+            <div class="noticeContent_box notice3">
+              <div class="noticeImg">
+                <img src="img/logo_mark.png" alt="공지뉴스" />
+              </div>
+              <div class="noticeClip">
+                <h4>전자증권 전환대상 주권 등의 권리자 보호 안내</h4>
+                <p>
+                  전환 대상 주권 및 기타 금융상품의 보유자와 투자자들을 위한
+                  안전 및 권리 보호에 대한 중요 정보를 안내합니다.<br />
+                  <span>2020-05-14</span>
+                  <a href="" class="moreTxt">더보기</a>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="B2B">
+        <div class="b2bContents container">
+          <h2>B2B</h2>
+          <p>
+            우리는 파트너와의 강력한 협력을 통해 최고의 경험을 제공합니다.<br />
+            단순한 공급업체를 넘어, 진정한 파트너로서 협력합니다.<br />
+            귀사의 비즈니스 목표를 달성하기 위한 구체적이며 실질적인 지원을
+            약속합니다.
+            <a href="">기업 B2B 문의 및 소식 구독하기</a>
+          </p>
+        </div>
+      </section>
+    </main>
+
+    <?php include 'footer.php'; ?>
+
+    <!-- 제이쿼리 라이브러리 -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+      integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <!-- 스와이프 라이브러리 -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+    <!-- 폰트어썸 라이브러리 -->
+    <script crossorigin="anonymous"></script>
+    <!-- 기본 js 파일 -->
+    <script src="js/script.js"></script>
+  </body>
+</html>

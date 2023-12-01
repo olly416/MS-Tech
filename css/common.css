@@ -1,0 +1,135 @@
+/* 구글폰트 불러오기 */
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;600&family=Roboto:wght@500;700;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;600&family=Roboto+Slab:wght@800&family=Roboto:wght@500;700;900&display=swap");
+
+/* 색깔,사이즈 */
+:root {
+  /* color */
+  --FontColor: #222;
+  --steelBlue: #347da2;
+  --darkseaGreen: #2e6756;
+  --white: #eee;
+  --whiteGray: #ededed;
+  --goldenRod: #ffd400;
+
+  /* font */
+  --Font: 1em;
+  --Font_lg: calc(var(--Font) * 1.7);
+  --Font_md: calc(var(--Font) * 1.375); /*24px*/
+  --Font_sm: calc(var(--Font) * 1.125); /*18px*/
+}
+
+/* 리셋  */
+html,
+body {
+  overflow-x: hidden;
+  width: 100%;
+  height: auto;
+  padding: 0;
+  margin: 0;
+}
+html {
+  overscroll-behavior: none;
+}
+body {
+  min-height: 100vh;
+  min-height: -webkit-fill-available;
+  color: #333;
+  font-family: "Noto Sans KR", sans-serif;
+  font-size: var(--Font);
+}
+body * {
+  box-sizing: border-box;
+}
+img {
+  display: inline-block;
+  vertical-align: top;
+}
+ul {
+  list-style: none;
+  padding-inline-start: 0;
+  margin-block-start: 0;
+  margin-block-end: 0;
+}
+a {
+  color: var(--FontColor);
+  text-decoration: none;
+}
+h2 {
+  font-size: calc(var(--Font) * 2.5);
+  font-weight: 900;
+  color: var(--FontColor);
+}
+h3 {
+  font-size: calc(var(--Font) * 1.65);
+}
+h4 {
+  font-size: calc(var(--Font) * 1.35);
+  margin-block-start: 0;
+  margin-block-end: 0;
+}
+
+/* 틀, 프레임 */
+.pc_layout {
+  width: 100%;
+}
+.hidden {
+  position: absolute;
+  width: 1px;
+  height: 1;
+  margin: -1px;
+  overflow: hidden;
+  -webkit-clip-path: polygon(0 0, 0 0, 0 0);
+  clip-path: polygon(0 0, 0 0, 0 0);
+}
+
+.container {
+  width: 1200px;
+  height: 100%;
+  margin: 0 auto;
+}
+
+/* 섹션영역 */
+section {
+  width: 100%;
+  height: 100vh;
+  padding-top: 6em;
+}
+section h2 {
+  text-align: center;
+  margin-bottom: 1.2em;
+}
+section:not(.B2B) {
+  background-color: #fff;
+}
+
+/* 기타 요소*/
+video {
+  cursor: default;
+}
+.moreTxt {
+  position: absolute;
+  font-size: 0.8em;
+  color: #000;
+  font-weight: 800;
+  text-align: right;
+}
+.moreTxt::after {
+  display: block;
+  content: "\2192";
+  position: absolute;
+  top: 0%;
+  left: 110%;
+  left: calc(100% + 5px);
+}
+.moreTxt:hover::after {
+  animation: readMore 2.5s ease-in-out infinite;
+}
+@keyframes readMore {
+  60% {
+    left: calc(100% + 10px);
+  }
+  100% {
+    opacity: 0;
+  }
+}
