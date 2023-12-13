@@ -34,7 +34,8 @@ header {
   -webkit-box-align: center;
   -ms-flex-align: center;
 }
-header:hover {
+header:hover,
+header.focus {
   height: 310px;
 }
 header .logo {

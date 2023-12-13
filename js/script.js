@@ -1,5 +1,4 @@
 ///////////////////////////////// INDEX /////////////////////////////////
-
 // 스와이퍼 슬라이드 초기 설정
 const swiper = new Swiper(".swiper", {
   direction: "horizontal",
@@ -16,6 +15,18 @@ const swiper = new Swiper(".swiper", {
     el: ".swiper-scrollbar",
   },
 });
+
+// 헤더 포커스 시에 높이 변경
+const headerAnchor = $('header'),
+      headerNav = $('header a');
+headerNav.on("focus", function() {
+  headerAnchor.addClass("focus");
+});
+headerNav.on("blur", function() {
+  headerAnchor.removeClass("focus");
+});
+
+
 
 // 메인슬라이드 글자 효과
 const mainSlides = $(".swiper-slide");
@@ -35,6 +46,7 @@ function animationStart() {
   mainSlides.eq(idx).addClass("active");
 }
 
+
 // Business Section 마우스 오면 비디오 재생
 const videoContainer = $(".video_container");
 
@@ -49,10 +61,10 @@ videoContainer.mouseout(function () {
 
 // 스크롤이 해당 섹션 진입 시 작동하는 것들
 const windowHeight = $(document).height() - $(window).height(),
-  windowWidth = $(window).width(),
-  companyObj = $(".companyContent_img > div, .companyContent_content"),
-  businessVids = $(".business_vid"),
-  businessImg = $(".business_img");
+      windowWidth = $(window).width(),
+      companyObj = $(".companyContent_img > div, .companyContent_content"),
+      businessVids = $(".business_vid"),
+      businessImg = $(".business_img");
 
 $(window).scroll(function () {
   const scrollValue = $(window).scrollTop(),
@@ -79,7 +91,6 @@ $(window).scroll(function () {
   }
   // 3. 화면너비 481px 미만 & 비즈니스 섹션 진입하면, 비디오/이미지 재생
   if (windowWidth < 481) {
-    // businessVids.css('display','none');
     if (trigger > 0.2) {
       businessImg.eq(0).css("display", "block");
     }
@@ -115,6 +126,7 @@ $(window).scroll(function () {
   }
 });
 
+
 // 메뉴버튼 누를 때마다 클래스명 active 토글
 const activeObj = $("body, header, .nav"),
   mnBtn = $("header .bars");
@@ -123,11 +135,14 @@ mnBtn.click(function () {
   $(this).find("i").toggleClass("active");
 });
 
+
 // 모바일에서 .nav 터치하면 메뉴 높이 변화
 const navHeight = $(".nav li");
 navHeight.on("click", function () {
   $(this).toggleClass("activate").siblings().removeClass("activate");
 });
+
+
 
 //////////////////////////   INDEX 외 다른 페이지    //////////////////////////
 // GNB:Hover(PC), click(Moblie) 하면 메뉴 보이기
@@ -147,6 +162,7 @@ $("html, body").on("click touchstart touchend", function (ev) {
     gnb.siblings("ul").removeClass("hover");
   }
 });
+
 
 // battery 페이지 :  스크롤 절반 넘어가면 내용 나타남
 $(window).scroll(function () {
