@@ -55,10 +55,6 @@ a {
   color: var(--FontColor);
   text-decoration: none;
 }
-.swiper-pagination-bullet:focus {
-  outline:3px solid var(--steelBlue);
-  opacity:1;
-}
 h2 {
   font-size: calc(var(--Font) * 2.5);
   font-weight: 900;

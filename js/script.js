@@ -16,6 +16,7 @@ const swiper = new Swiper(".swiper", {
   },
 });
 
+
 // 헤더 포커스 시에 높이 변경
 const headerAnchor = $('header'),
       headerNav = $('header a');
