@@ -1,10 +1,11 @@
 @import url(common.css);
-/* --------------------------------------------------------------------- */
-/* ----------------------------- < INDEX > ----------------------------- */
-/* --------------------------------------------------------------------- */
 
-/* --------------------------------< Header >-------------------------------- */
-/* -----( Nav )----- */
+/* ----------------------------- < INDEX > ----------------------------- */
+
+/* --------------------------------------------------------------------- */
+/* -----------------------------< Header >------------------------------ */
+/* -------------------------------< Nav >------------------------------- */
+/* --------------------------------------------------------------------- */
 body {
   position: relative;
 }
@@ -58,7 +59,7 @@ header .nav {
   position: absolute;
   top: 0;
   right: 50%;
-  width: calc(var(--Font) * 65);
+  width: 65%;
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
   -webkit-transform: translateX(50%);
@@ -165,9 +166,9 @@ header .bars i {
   -webkit-transition: 0.35s ease-in-out;
   -o-transition: 0.35s ease-in-out;
   transition: 0.35s ease-in-out;
-  -webkit-transform: translate(-48%, -48%);
-  -ms-transform: translate(-48%, -48%);
-  transform: translate(-48%, -48%);
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
 }
 header .bars i.fa-bars {
   opacity: 1;
@@ -186,8 +187,10 @@ header .siteMap {
   border-radius: 25px;
 }
 
-/* --------------------------------< MAIN >-------------------------------- */
-/* -----( Section :: main_swiper 스와이퍼 슬라이드  )----- */
+/* ----------------------------------< MAIN >---------------------------------- */
+/* ---------------------------------------------------------------------------- */
+/* ---------------<  Section :: main_swiper 스와이퍼 슬라이드  >----------------- */
+/* ---------------------------------------------------------------------------- */
 .main_swiper {
   display: block;
   margin-top: 100px;
@@ -419,7 +422,9 @@ header .siteMap {
   display: none;
 }
 
-/* -----( Section :: Business )----- */
+/* ---------------------------------------------------------------------------- */
+/* --------------------------<  Section :: Business >-------------------------- */
+/* ---------------------------------------------------------------------------- */
 .Business h2 {
   margin: 1em 0 1.5em;
 }
@@ -490,7 +495,9 @@ header .siteMap {
   line-height: 2;
 }
 
-/* -----( Section :: Company )----- */
+/* ---------------------------------------------------------------------------- */
+/* --------------------------<  Section :: Company  >-------------------------- */
+/* ---------------------------------------------------------------------------- */
 .Company {
   padding: 2em 0;
   position: relative;
@@ -695,6 +702,7 @@ header .siteMap {
   text-align: center;
 }
 .content2 .content2_info span {
+  font-size: var(--Font);
   display: block;
   white-space: nowrap;
 }
@@ -708,7 +716,9 @@ header .siteMap {
   border-radius: 50%;
 }
 
-/* -----( Section :: Notice )----- */
+/* ---------------------------------------------------------------------------- */
+/* --------------------------<  Section :: Notice  >--------------------------- */
+/* ---------------------------------------------------------------------------- */
 section.Notice {
   background: #fff;
 }
@@ -759,7 +769,9 @@ section.Notice {
   line-height: 1.8;
 }
 
-/* -----( Section :: B2B )----- */
+/* ---------------------------------------------------------------------------- */
+/* ----------------------------<  Section :: B2B  >---------------------------- */
+/* ---------------------------------------------------------------------------- */
 .B2B {
   margin-top: 10%;
   padding: 3em 0;
@@ -815,7 +827,10 @@ section.Notice {
     width: 1em;
   }
 }
+
+/* ---------------------------------------------------------------------------- */
 /* --------------------------------<  Footer  >-------------------------------- */
+/* ---------------------------------------------------------------------------- */
 footer {
   padding: 6em 0;
   width: 100%;
@@ -1233,16 +1248,6 @@ option {
   display: block;
 }
 
-/* -----(    )----- */
-/* -----(  )----- */
-/* -----(  )----- */
-
-/* --------------------------------<  >-------------------------------- */
-
-/* --------------------------------<  >-------------------------------- */
-/* -----(  )----- */
-/* -----( Section ::  )----- */
-
 /* ----------------------< 반응형 미디어쿼리 >---------------------- */
 @media (max-width: 1300px) {
   :root {
@@ -1283,8 +1288,10 @@ option {
   :root {
     --Font: 0.95em;
   }
-  section:not(.main_swiper, .B2B) {
-    height: 70vh;
+  
+  header.active,
+  .nav.active{
+    position:fixed;
   }
   .container:not(.companyContentBox) {
     width: 100%;
@@ -1531,6 +1538,16 @@ option {
   .businessBox {
     width: 23em;
   }
+  .businessBox_descript {    
+    line-height: 1.5;
+  }
+  .notice3 p{
+    display:-webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    overflow:hidden;
+    text-overflow:ellipsis;    
+  }
   .background01 {
     background-size: 90%;
   }
@@ -1573,9 +1590,6 @@ option {
   }
   section {
     padding-top: 0;
-    height: -webkit-fit-content !important;
-    height: -moz-fit-content !important;
-    height: fit-content !important;
   }
   h2 {
     font-size: calc(var(--Font) * 2);
@@ -1583,13 +1597,12 @@ option {
   header,
   header:hover {
     height: 60px;
-  }
-  header.active {
-    position: fixed;
-  }
+  }  
   body.active {
     overflow: hidden;
-    height: 100vh;
+  }
+  header .bars {
+    right: 12px;
   }
   .main_swiper {
     margin-top: 60px;
@@ -1603,9 +1616,9 @@ option {
     left: 5%;
     width: 4em;
     height: 0.75em;
-    -webkit-transform: translateY(-50%);
-    -ms-transform: translateY(-50%);
-    transform: translateY(-50%);
+    -webkit-transform: translateY(-55%);
+    -ms-transform: translateY(-55%);
+    transform: translateY(-55%);
   }
   header .bars {
     width: 36px;
@@ -1745,14 +1758,17 @@ option {
     width: 100%;
   }
   .businessBox:first-child {
-    margin: 0 0 2.5em 0;
+    margin: 0 0 2.8em 0;
   }
   .businessBox_videoContent {
     width: 100%;
   }
   .businessBox_descript {
-    padding-top: 5%;
+    padding-top: 8%;
     top: 50%;
+  }
+  .businessBox_descript {
+    line-height: 1.65;
   }
   .businessBox_videoContent {
     overflow: hidden;
@@ -1769,7 +1785,7 @@ option {
     margin-block-end: 0.25em;
   }
   .businessBox p {
-    font-size: 0.84em;
+    font-size: 0.9em;
     -webkit-margin-before: 0;
     margin-block-start: 0;
     -webkit-margin-after: 1em;
@@ -1823,6 +1839,9 @@ option {
   .companyContent_content p {
     width: auto;
     text-align: center;
+  }
+  .companyContent_content h4 {
+    margin-right: 0;
   }
   .content2 .content2_info {
     -webkit-transform: translate(0);

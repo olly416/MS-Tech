@@ -1,4 +1,9 @@
 ///////////////////////////////// INDEX /////////////////////////////////
+// a 태그 기능 막기
+$('.preventClick').click(function(event){
+  event.preventDefault();
+});
+
 // 스와이퍼 슬라이드 초기 설정
 const swiper = new Swiper(".swiper", {
   direction: "horizontal",
