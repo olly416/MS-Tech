@@ -14,7 +14,7 @@
 
   /* font */
   --Font: 1em;
-  --Font_lg: calc(var(--Font) * 1.7);
+  --Font_lg: calc(var(--Font) * 1.7); /*27px*/
   --Font_md: calc(var(--Font) * 1.375); /*24px*/
   --Font_sm: calc(var(--Font) * 1.125); /*18px*/
 }
@@ -48,23 +48,24 @@ img {
 ul {
   list-style: none;
   padding-inline-start: 0;
-  margin-block-start: 0;
-  margin-block-end: 0;
 }
 a {
   color: var(--FontColor);
   text-decoration: none;
 }
 h2 {
-  font-size: calc(var(--Font) * 2.5);
-  font-weight: 900;
   color: var(--FontColor);
+  font-size: calc(var(--Font) * 2.5);/*40px*/
+  font-weight: 900;
 }
 h3 {
-  font-size: calc(var(--Font) * 1.65);
+  font-size: calc(var(--Font) * 1.65);/*26.4px*/
 }
 h4 {
-  font-size: calc(var(--Font) * 1.35);
+  font-size: calc(var(--Font) * 1.35);/*21.6px*/
+}
+ul, h4 {
+  font-size: calc(var(--Font) * 1.35);/*21.6px*/
   margin-block-start: 0;
   margin-block-end: 0;
 }
@@ -76,23 +77,20 @@ h4 {
 .hidden {
   position: absolute;
   width: 1px;
-  height: 1;
+  height: 1px;
   margin: -1px;
   overflow: hidden;
   -webkit-clip-path: polygon(0 0, 0 0, 0 0);
   clip-path: polygon(0 0, 0 0, 0 0);
 }
-
 .container {
   width: 1200px;
-  height: 100%;
   margin: 0 auto;
 }
 
 /* 섹션영역 */
 section {
   width: 100%;
-  height: 100vh;
   padding-top: 6em;
 }
 section h2 {
@@ -100,6 +98,7 @@ section h2 {
   margin-bottom: 1.2em;
 }
 section:not(.B2B) {
+  min-height:100vh;
   background-color: #fff;
 }
 
@@ -109,27 +108,24 @@ video {
 }
 .moreTxt {
   position: absolute;
-  font-size: 0.8em;
   color: #000;
-  font-weight: 800;
   text-align: right;
+  font-size: 0.8em;
+  font-weight: 800;
 }
 .moreTxt::after {
-  display: block;
   content: "\2192";
+  display: block;
   position: absolute;
   top: 0%;
-  left: 110%;
   left: calc(100% + 5px);
 }
 .moreTxt:hover::after {
-  animation: readMore 2.5s ease-in-out infinite;
+  animation: readMore 2s ease-in-out infinite;
 }
-@keyframes readMore {
-  60% {
-    left: calc(100% + 10px);
-  }
+@keyframes readMore {    
   100% {
+    left: calc(100% + 12px);
     opacity: 0;
   }
 }

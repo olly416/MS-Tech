@@ -1,11 +1,8 @@
 @import url(common.css);
 
-/* ----------------------------- < INDEX > ----------------------------- */
+/*     INDEX     */
+/* ========= Header : Navigation ========== */
 
-/* --------------------------------------------------------------------- */
-/* -----------------------------< Header >------------------------------ */
-/* -------------------------------< Nav >------------------------------- */
-/* --------------------------------------------------------------------- */
 body {
   position: relative;
 }
@@ -75,7 +72,7 @@ header .nav > li > span {
   margin-bottom: 5px;
   border-bottom: 2px solid transparent;
   width: 100%;
-  font-size: var(--Font_md);
+  font-size: var(--Font_sm);
   font-weight: 600;
   line-height: 100px;
   -webkit-transition: 0.4s ease-in-out;
@@ -96,6 +93,7 @@ header .nav .subMenu li {
   position: relative;
   width: 100%;
   text-align: center;
+  font-size: 1.25rem;
 }
 header .nav .subMenu li a,
 header .nav .subMenu li span {
@@ -192,11 +190,10 @@ header .siteMap {
 /* ---------------<  Section :: main_swiper 스와이퍼 슬라이드  >----------------- */
 /* ---------------------------------------------------------------------------- */
 .main_swiper {
-  display: block;
-  margin-top: 100px;
   position: relative;
   width: 100%;
   height: calc(100vh - 100px);
+  margin-top: 100px;
 }
 .swiper {
   position: absolute;
@@ -248,7 +245,6 @@ header .siteMap {
   color: var(--FontColor);
 }
 .swiper-slide span {
-  width: 100%;
   white-space: nowrap;
   opacity: 0;
 }
@@ -317,7 +313,6 @@ header .siteMap {
 }
 .swiper_controller > * {
   display: block;
-  position: absolute;
   bottom: 50%;
   left: 50%;
   -webkit-transform: translate(-50%, 10%);
@@ -332,13 +327,7 @@ header .siteMap {
   justify-content: center;
   position: absolute;
   top: 50%;
-  left: 50%;
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
-  height: -webkit-fit-content;
-  height: -moz-fit-content;
-  height: fit-content;
+  left: 50%;    
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   -webkit-box-align: center;
@@ -359,42 +348,26 @@ header .siteMap {
   -ms-flex-pack: center;
 }
 .swiper-pagination-bullet:focus {
-  -webkit-outline: 3px solid var(--steelBlue);
-  -o-outline: 3px solid var(--steelBlue);
-  -ms-outline: 3px solid var(--steelBlue);
-  outline:3px solid var(--steelBlue);
+  -webkit-outline: 3px solid rgba(255, 255, 255, 0.5);
+  -o-outline: 3px solid rgba(255, 255, 255, 0.5);
+  -ms-outline: 3px solid rgba(255, 255, 255, 0.5);
+  outline:3px solid rgba(255, 255, 255, 0.5);
   opacity:1;
 }
 .swiper-pagination-bullet-active {
   border-color: rgb(52, 125, 162, 0.65);
   background: rgba(255, 255, 255, 0.75);
 }
-.swiper-horizontal > .swiper-pagination-bullets,
-.swiper-pagination-bullets.swiper-pagination-horizontal,
-.swiper-pagination-custom,
-.swiper-pagination-fraction {
-  left: 50%;
-}
 .swiper-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet,
-.swiper-pagination-horizontal.swiper-pagination-bullets
-  .swiper-pagination-bullet {
+.swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {
   margin: 0 7px;
 }
 .swiper-button-next,
-.swiper-button-prev {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 2.33em;
-  height: 2.33em;
+.swiper-button-prev {  
+  width: 35px;
+  height: 35px;
   background: rgba(0, 0, 0, 0.3);
   color: rgba(255, 255, 255, 0.6);
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
   border-radius: 50%;
 }
 .swiper-button-prev {
@@ -405,15 +378,20 @@ header .siteMap {
 }
 .swiper-button-next:after,
 .swiper-button-prev:after {
-  clear: both;
-  font-size: 1.1em;
+  position: absolute;
+  top:50%;
+  left:50%;  
+  width:40%;
+  height:40%;
+  font-size: 1em;
   font-weight: bold;
+  text-align: center;
+  transform:translate(-60%,-55%);
+  -webkit-transform: translate(-60%, -55%);
 }
 .swiper-button-next:after {
-  margin-left: 3px;
-}
-.swiper-button-prev:after {
-  margin-right: 3px;
+  transform:translate(-35%,-55%);
+  -webkit-transform: translate(-35%,-55%);
 }
 .swiper-scrollbar-drag {
   background: rgba(255, 255, 255, 0.65);
@@ -437,12 +415,11 @@ header .siteMap {
   -ms-flex-align: center;
 }
 .businessBox {
+  position: relative;
+  width: 30em;
   margin: 0 auto;
   padding-top: 50%;
   border-bottom: 1em solid var(--steelBlue);
-  position: relative;
-  width: 30em;
-  height: 0;
   background-color: #ddd;
   -webkit-transition: 0.25s ease-in-out;
   -o-transition: 0.25s ease-in-out;
@@ -451,7 +428,7 @@ header .siteMap {
 }
 .businessBox:hover {
   border-bottom: 1em solid var(--steelBlue);
-  background-color: rgba(0, 0, 0, 0.02);
+  background-color: rgba(0, 0, 0, 0.05);
 }
 .businessBox h3,
 .businessBox p {
@@ -459,7 +436,6 @@ header .siteMap {
 }
 .businessBox:hover h3,
 .businessBox:hover p {
-  font-weight: 800;
   color: var(--steelBlue);
   -webkit-transition: 0.35s ease-in-out;
   -o-transition: 0.35s ease-in-out;
@@ -480,19 +456,18 @@ header .siteMap {
 .businessBox .business_img {
   display: none;
 }
-.businessBox h3 {
-  font-weight: 900;
-  text-align: center;
-}
 .businessBox_descript {
-  padding: 1% 8% 2%;
   overflow: hidden;
   position: absolute;
   bottom: 0;
   left: 0;
   width: 100%;
   height: 50%;
+  padding: 1% 8% 2%;
   line-height: 2;
+}
+.businessBox_descript h3 {
+  text-align: center;  
 }
 
 /* ---------------------------------------------------------------------------- */
@@ -505,8 +480,8 @@ header .siteMap {
 .Company h4 {
   text-transform: uppercase;
 }
-.companyContentBox,
-.companyContent_img {
+.companyContent_img,
+.companyContentBox {
   position: absolute;
   top: 0;
   width: 50%;
@@ -696,24 +671,22 @@ header .siteMap {
   transform: translate(-10%, 10%);
 }
 .content2 .content2_info a {
-  padding: 2.5em 1em;
   width: 100%;
-  height: auto;
+  padding: 2.5em 1em;
   text-align: center;
 }
 .content2 .content2_info span {
-  font-size: var(--Font);
   display: block;
   white-space: nowrap;
 }
 .content2 .content2_info i {
   display: inline-block;
-  padding: 1em 0;
   width: 3em;
-  background-color: var(--steelBlue);
-  font-size: 1.2em;
-  color: #eee;
+  padding: 1em 0;
   border-radius: 50%;
+  background-color: var(--steelBlue);
+  color: #eee;
+  font-size: 1em;
 }
 
 /* ---------------------------------------------------------------------------- */
@@ -726,18 +699,18 @@ section.Notice {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  margin: 0 auto 2em;
-  border: 2px solid rgba(0, 0, 0, 0.05);
   position: relative;
   width: 80%;
   height: 10em;
+  margin: 0 auto 2em;
+  border: 2px solid rgba(0, 0, 0, 0.05);
 }
 .noticeImg {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  border: 5px solid #fff;
   width: 35%;
+  border: 5px solid #fff;
   background-color: #eee;
 }
 .notice2 .noticeImg {
@@ -746,13 +719,13 @@ section.Notice {
   background-size: cover;
 }
 .noticeImg img {
-  margin: auto;
   width: 100%;
   height: auto;
+  margin: auto;
 }
 .noticeClip {
-  padding: 0.8em 1.5em;
   width: 65%;
+  padding: 0.8em 1.5em;
 }
 .noticeClip p:not(a) {
   font-size: 0.925em;
@@ -773,10 +746,10 @@ section.Notice {
 /* ----------------------------<  Section :: B2B  >---------------------------- */
 /* ---------------------------------------------------------------------------- */
 .B2B {
-  margin-top: 10%;
-  padding: 3em 0;
   width: 100%;
   height: 40%;
+  margin-top: 10%;
+  padding: 3em 0;
   background: url(../img/factory.jpg);
   background-position: top center;
   background-size: cover;
@@ -802,13 +775,13 @@ section.Notice {
   margin-top: 3em;
 }
 .b2bContents a::after {
+  content: "";
   display: block;
-  margin: 0 auto;
   width: 13em;
   height: 1px;
-  clear: both;
+  margin: 0 auto;
   background-color: #333;
-  content: "";
+  clear: both;
   -webkit-transform: translateY(-8px);
   -ms-transform: translateY(-8px);
   transform: translateY(-8px);
@@ -832,10 +805,10 @@ section.Notice {
 /* --------------------------------<  Footer  >-------------------------------- */
 /* ---------------------------------------------------------------------------- */
 footer {
-  padding: 6em 0;
   width: 100%;
-  background-color: #202b34;
+  padding: 6em 0;
   color: #eee;
+  background-color: #202b34;
 }
 .terms {
   display: -webkit-box;
@@ -844,8 +817,8 @@ footer {
   padding: 1em 0;
 }
 .terms a {
-  margin-right: 1.2em;
   position: relative;
+  margin-right: 1.2em;
   color: #eee;
 }
 .terms a:hover {
@@ -862,19 +835,19 @@ label {
   opacity: 0;
 }
 #sites {
-  margin-top: 10px;
-  padding: 6px 4px;
-  border: 3px solid transparent;
   position: absolute;
   top: 0;
   right: 0;
   width: 13em;
+  margin-top: 10px;
+  padding: 6px 4px;
+  border: 3px solid transparent;
+  border-radius: 5px;
   font-weight: 800;
   color: var(--steelBlue);
   -webkit-transition: border 0.3s;
   -o-transition: border 0.3s;
   transition: border 0.3s;
-  border-radius: 5px;
 }
 #sites:focus {
   border-color: var(--steelBlue);
@@ -891,14 +864,16 @@ option {
   bottom: 20px;
   width: 50px;
   height: 50px;
+  border-radius: 25px;
   background-color: #eee;
   -webkit-transition: 0.5s ease;
   -o-transition: 0.5s ease;
   transition: 0.5s ease;
-  cursor: pointer;
   -webkit-transform: translate3d(0, 0, 0);
   transform: translate3d(0, 0, 0);
-  border-radius: 25px;
+  opacity:0;
+  z-index: 10;
+  cursor: pointer;
 }
 .topBtn i {
   display: inline-block;
@@ -913,6 +888,9 @@ option {
 }
 .topBtn:hover {
   background-color: var(--steelBlue);
+}
+.topBtn.active {
+  opacity:1;
 }
 
 /* --------------------------------------------------------------------- */
@@ -1474,6 +1452,7 @@ option {
   .companyContent_content h4 {
     min-width: 110px;
     margin-right: 15px;
+    font-size: calc(var(--Font)* 1.2);
   }
   .Company .moreTxt {
     width: 180%;
@@ -1586,7 +1565,8 @@ option {
     height: 100vh;
   }
   section.Business {
-    height: 120vh;
+    /* height: 120vh; */
+    height: auto;
   }
   section {
     padding-top: 0;
@@ -1640,12 +1620,7 @@ option {
   }
   .swiper-slide.slide3 {
     background-position: center center;
-    background-size: 130% 100%;
-  }
-  .swiper_controller > * {
-    -webkit-transform: translate(-50%, 20%);
-    -ms-transform: translate(-50%, 20%);
-    transform: translate(-50%, 20%);
+    background-size: 300% 100%;
   }
   .slide3 .slideContent {
     top: 70%;
@@ -1694,7 +1669,7 @@ option {
   .iconScroll,
   .iconScroll:before {
     position: absolute;
-    bottom: 5%;
+    bottom: 8%;
     left: 50%;
     -webkit-transform: translateX(-50%);
     -ms-transform: translateX(-50%);
@@ -1703,8 +1678,8 @@ option {
   .iconScroll {
     display: block;
     border: 2px solid #ccc;
-    width: 30px;
-    height: 45px;
+    width: 8%;
+    height: 42px;
     border-radius: 15px;
   }
   .iconScroll:before {
@@ -1754,7 +1729,7 @@ option {
     -ms-flex-pack: start;
   }
   .businessBox {
-    padding-top: 90%;
+    padding-top: 95%;
     width: 100%;
   }
   .businessBox:first-child {
@@ -1764,7 +1739,7 @@ option {
     width: 100%;
   }
   .businessBox_descript {
-    padding-top: 8%;
+    padding-top: 4%;
     top: 50%;
   }
   .businessBox_descript {
@@ -1781,8 +1756,8 @@ option {
     margin-block-end: 0.7em;
   }
   .businessBox:nth-child(2) h3 {
-    -webkit-margin-after: 0.25em;
-    margin-block-end: 0.25em;
+    -webkit-margin-after: 0.6em;
+    margin-block-end: 0.6em;
   }
   .businessBox p {
     font-size: 0.9em;
@@ -1819,6 +1794,7 @@ option {
     height: calc(75% - 2em);
     -webkit-box-pack: start;
     -ms-flex-pack: start;
+    line-height: 1.15;
   }
   .Company .companyContentBox .companyContent_content {
     display: -webkit-box;
@@ -1869,11 +1845,11 @@ option {
   .noticeContent_box {
     margin-bottom: 2.5em;
     width: 90%;
-    height: 11em;
+    height: 22vh;
   }
   .noticeContent_box h4 {
     margin-top: 5%;
-    font-size: calc(var(--Font) * 1.2);
+    font-size: var(--Font);
   }
   .noticeClip p:not(a, span) {
     font-size: 0.875em;
@@ -1901,7 +1877,7 @@ option {
     padding-top: 1.8em;
   }
   .terms a {
-    font-size: 0.85em;
+    font-size: 3.25vw;
   }
   #sites {
     margin-top: -16px;

@@ -1,6 +1,6 @@
 ///////////////////////////////// INDEX /////////////////////////////////
 // a 태그 기능 막기
-$('.preventClick').click(function(event){
+$('.moreTxt').click(function(event){
   event.preventDefault();
 });
 
@@ -116,19 +116,16 @@ $(window).scroll(function () {
   const gnbBar = $(".gnb_bar");
   if (scrollValue >= 500) {
     gnbBar.addClass("fixed");
-    $("html, body").addClass("fixed");
   } else {
     gnbBar.removeClass("fixed");
-    $("html, body").removeClass("fixed");
   }
 
   // topBtn 일정 스크롤 이상 되면 나타난다
   const topBtn = $(".topBtn");
-  topBtn.css("opacity", "0");
   if (trigger >= 0.6) {
-    topBtn.animate({ opacity: 1 }, { duration: 50, easing: "linear" });
+    topBtn.addClass("active");
   } else if (trigger < 0.6) {
-    topBtn.animate({ opacity: 0 }, { duration: 50, easing: "linear" });
+    topBtn.removeClass("active");
   }
 });
 
